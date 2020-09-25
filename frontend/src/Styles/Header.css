@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+}
+.Header {
+    background-color: #E2DED8;
+    display: flex;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.navigation {
+    width: 100%;
+    font-family: "Noto Sans KR";
+    white-space: nowrap;
+    overflow-wrap: normal;
+    display: flex;
+}
+.logo {
+    display: flex;
+    margin-left: auto;
+}
+.name {
+    display: none;
+}
+.links {
+    flex: 1;
+}
+
+.toggler {
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    .name {
+        display: flex;
+        margin-left: 15px;
+        align-items: center;
+        font-size: 24px;
+    }
+  }
