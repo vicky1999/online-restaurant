@@ -1,0 +1,52 @@
+.Menus {
+    margin: 20px 0px;
+    display: flex;
+    font-family: "Heebo";
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col {
+    flex: 50%;
+}
+
+.left_content {
+    width: 50%;
+}
+.left_content img {
+    display:flex;
+    width: 100%;
+}
+
+.buttons {
+    display: inline-block;
+}
+
+.right_content {
+    min-width: 600px;
+    position: relative;
+    padding: 15px 50px;
+    text-align: left;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.button {
+    margin:5px;
+    width: 300px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .right_content {
+        width: 95%;
+        text-align: justify;
+    }
+    .buttons {
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 630px) {
+    .right_content {
+        min-width: 400px;
+    }
+}

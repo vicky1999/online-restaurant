@@ -1,8 +1,9 @@
 * {
-  background-color: #d1ccb9;
+  margin: 0;
 }
 .App {
   text-align: center;
+  background-color: #d1ccb9;
 }
 
 .App-logo {
