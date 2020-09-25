@@ -1,0 +1,52 @@
+.About {
+    margin: 20px 0px;
+    display: flex;
+    font-family: "Heebo";
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col {
+    flex: 50%;
+}
+
+.about_image {
+    width: 50%;
+}
+.about_image img {
+    display:flex;
+    width: 100%;
+}
+
+.about_text {
+    min-width: 600px;
+    position: relative;
+    padding: 15px 30px;
+    text-align: justify;
+}
+
+.about_logo {
+    width: 300px;
+    height: 200px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .about_logo {
+        width: 90%;
+        position: relative;
+        height: auto;
+    }
+    .about_text {
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 630px) {
+    .about_logo {
+        width: 90%;
+        position: relative;
+        height: auto;
+    }
+    .about_text {
+        min-width: 400px;
+    }
+}
