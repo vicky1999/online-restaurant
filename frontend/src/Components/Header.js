@@ -6,19 +6,6 @@ import {Navbar,Nav} from 'react-bootstrap';
 const Header=() => {
     return (
         <div className="Header">
-            {/* <div className="logo">
-                <img src="/images/logo.png" alt="logo" />
-            </div>
-            <div className="links">
-                <a href="#menu">MENUS</a>
-                <a href="#bookings">BOOKINGS</a>
-                <a href="#private">PRIVATE DINING</a>
-                <a href="#wellbeing">YOUR WELLBEING</a>
-                <a href="#contact">CONTACT</a>
-                <a href="#vouchers">VOUCHERS</a>
-                <a href="#shop">OUR SHOP</a>
-                <a href="#group">OUR GROUP</a>
-            </div> */}
             <Navbar sticky="top" expand="lg" className="navigation">
                 <Navbar.Brand href="#home" className="logo">
                     <img src="/images/logo.png" alt="logo" />
