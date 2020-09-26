@@ -1,0 +1,39 @@
+.Making {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right {
+    flex: auto;
+    float: left;
+}
+
+.left {
+    margin:auto auto;
+    padding: 10px 10px;
+    flex: 40%;
+    text-align: justify;
+}
+
+.left > h1 {
+    text-align: center;
+}
+.button {
+    align-items: center;
+    justify-self: center;
+}
+@media screen and (max-width: 850px) {
+    .right {
+        flex: 100%;
+        width: 100%;
+    }
+    .right-img {
+        width: 100%;
+    }
+    .left {
+        margin: auto 10px;
+    }
+    .left > h1 {
+        text-align: center;
+    }
+}

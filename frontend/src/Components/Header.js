@@ -20,7 +20,7 @@ const Header=() => {
                         <Nav.Link href="#wellbeing">YOUR WELLBEING</Nav.Link>
                         <Nav.Link href="#contact">CONTACT</Nav.Link>
                         <Nav.Link href="#vouchers">VOUCHERS</Nav.Link>
-                        <Nav.Link href="#shop">OUR SHOP</Nav.Link>
+                        <Nav.Link href="/shop" target="_blank">OUR SHOP</Nav.Link>
                         <Nav.Link href="https://www.woodheadrestaurantgroup.co.uk/" target="_blank">OUR GROUP</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

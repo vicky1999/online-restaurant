@@ -1,0 +1,50 @@
+.ShopHead {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ccc5aa;
+}
+.logo {
+    margin: 10px 20px;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+}
+
+.price {
+    margin-right: 5px;
+    color: #ebe6d1;
+    width: auto;
+    height: 24px;
+    background: black;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+}
+.price:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 7px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 5px solid black;
+    border-bottom: 2px solid transparent;
+}
+
+.price-value {
+    padding: 0px 5px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 520px) {
+    .makings {
+        display: none;
+    }
+}

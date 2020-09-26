@@ -11,6 +11,7 @@ import Private from './Components/Private';
 import WellBeing from './Components/WellBeing';
 import Contact from './Components/Contact';
 
+
 function App() {
   return (
     <div className="App">
