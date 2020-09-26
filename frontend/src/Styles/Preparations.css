@@ -1,0 +1,29 @@
+.Preparations {
+    background-color: #ebe6d1;
+
+}
+
+.tabs, .tab {
+    background-color: #ebe6d1;
+}
+.dishes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.dish {
+    width: 48%;
+    border-radius: 10px;
+    margin: 5px 5px;
+    background-color: #ebe6d1;
+}
+
+.dish:hover {
+    box-shadow: 2px 2px 5px #aaaaaa;
+}
+
+@media screen  and (max-width: 750px) {
+    .dish {
+        width: 100%;
+    }
+}
