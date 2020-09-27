@@ -5,9 +5,11 @@ import '../Styles/Dish.css';
 const Dish = (props) => {
     return (
         <div className="dish-container">
-            <h3>{props.name}</h3>
-            <p>{props.description}</p>
-            <p>{props.price}</p>
+            <h5>{props.name}</h5>
+            <div className="descriptions">
+                <p className="desc">{props.description}</p>
+            </div>
+            <p className="cost">&euro; {props.price}</p>
         </div>
     )
 }

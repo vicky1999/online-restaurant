@@ -18,6 +18,10 @@
     background-color: #ebe6d1;
 }
 
+.tab-data {
+    background-color: #ebe6d1;
+}
+
 .dish:hover {
     box-shadow: 2px 2px 5px #aaaaaa;
 }

@@ -11,40 +11,11 @@ import Dish from './Dish';
 
 import '../Styles/Preparations.css';
 
-const dishes=[
-    {
-        "name": "Confit Potatoes",
-        "type": "Shop Classics",
-        "description": "Our confit potatoes have become rather legendary.",
-        "price": "5.00"
-    },
-    {
-        "name": "Chicken Leek pie",
-        "type": "Shop Classics",
-        "description": "Our confit potatoes have become rather legendary.",
-        "price": "5.00"
-    },
-    {
-        "name": "Sausage Roll",
-        "type": "Shop Classics",
-        "description": "Our confit potatoes have become rather legendary.",
-        "price": "5.00"
-    },
-    {
-        "name": "Dexter Beef Mince",
-        "type": "Ready-To-Heat",
-        "description": "Our confit potatoes have become rather legendary.",
-        "price": "5.00"
-    },
-    {
-        "name": "Chicken Tomato Orzo",
-        "type": "Ready-To-Heat",
-        "description": "Our confit potatoes have become rather legendary.",
-        "price": "5.00"
-    },
-];
+import {gql, useQuery} from '@apollo/client';
 
-const types=["Shop Classics","Ready-To-Heat","Butcher","Gifts","Books"];
+
+
+// const types=["Shop Classics","Ready-To-Heat","Butcher","Gifts","Books"];
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -95,45 +66,79 @@ const Preparations = (props) => {
     setValue(newValue);
   };
 
-  return (
-    <div className={classes.root}>
-      <AppBar position="static" color="default">
-        <Tabs 
-          value={value}
-          onChange={handleChange}
-          variant="scrollable"
-          scrollButtons="on"
-          indicatorColor="primary"
-          textColor="primary"
-          aria-label="dishes" centered
-          className="tabs"
-        >
-          {types.map((value,index) => {
-              return <Tab label={value} {...a11yProps({index})} />
-          })}
-        </Tabs>
-      </AppBar>
-      {types.map((res,index) => {
-        console.log(index);
-        return (
-            <TabPanel value={value} index={index}>
-                <div className="dishes">
-                    {dishes.map((dish,index) => {
-                        if(dish.type==res) {
-                            return (
-                                <div className="dish">
-                                  <Dish name={dish.name} description={dish.description} price={dish.price} />
-                                </div>
-                            )
-                        }
-                    })}
-                </div>
-            </TabPanel>
-        )
-      })}
-      
-    </div>
-  );
+  let types=[]
+  const typesQuery=gql`
+    query types($by: String) {
+      types(by:$by)
+    }
+  `;
+  const types_data = useQuery(typesQuery, {variables: {by: props.by}});
+  if(types_data.loading) types=["loading"];
+  if(types_data.error) {
+    types=["error!"];
+  }
+  if(types_data.data) {
+    types=types_data.data.types;
+  }
+  // To Get Dishes by ....
+  let dishes=[]
+  const dishQuery=gql`
+    query dish($by:String!)
+    {
+      dish(by:$by) {
+        name
+        description
+        type
+        price
+      }
+    }
+  `;
+  const {loading,err,data} = useQuery(dishQuery,{
+    variables: {by: props.by }
+  });
+  if(loading) return <p>Loading...</p>;
+  if(err) return <p> Error...!</p>;
+  if(data) {
+    dishes=data.dish;
+    return (
+      <div className={classes.root}>
+        <AppBar position="static" color="default">
+          <Tabs 
+            value={value}
+            onChange={handleChange}
+            variant="scrollable"
+            scrollButtons="on"
+            indicatorColor="primary"
+            textColor="primary"
+            aria-label="dishes" centered
+            className="tabs"
+          >
+            {types.map((value,index) => {
+                return <Tab label={value} {...a11yProps({index})} />
+            })}
+          </Tabs>
+        </AppBar>
+        {types.map((res,index) => {
+          return (
+              <TabPanel value={value} index={index} className="tab-data">
+                  <div className="dishes">
+                      {dishes.map((dish,index) => {
+                          if(dish.type==res) {
+                              return (
+                                  <div className="dish">
+                                    <Dish name={dish.name} description={dish.description} price={dish.price} />
+                                  </div>
+                              )
+                          }
+                      })}
+                  </div>
+              </TabPanel>
+          )
+        })}
+        
+      </div>
+    );
+  }
 }
 
 export default Preparations;

@@ -1,0 +1,19 @@
+.dish-container {
+    text-align: center;
+    padding: 3px 8px;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.desc {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.cost {
+    text-align: center;
+    font-weight: bold;
+}
+
+.descriptions {
+    align-items: center;
+}
