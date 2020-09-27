@@ -14,6 +14,7 @@ import {ApolloProvider} from '@apollo/client';
 import client from '../Client';
 
 const Shop= () => {
+
     return (
     <ApolloProvider client={client}>
         <div className="Shop">

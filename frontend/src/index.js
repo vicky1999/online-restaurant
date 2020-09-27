@@ -5,6 +5,7 @@ import App from './App';
 import {Route, BrowserRouter as Router} from 'react-router-dom';
 
 import Shop from './Components/Shop';
+import Buy from './Components/Buy';
 
 ReactDOM.render(
   <Router>
@@ -16,6 +17,11 @@ ReactDOM.render(
     <Route exact path="/shop">
       <React.StrictMode>
         <Shop />
+      </React.StrictMode>
+    </Route>
+    <Route exact path="/shop/buy">
+      <React.StrictMode>
+        <Buy />
       </React.StrictMode>
     </Route>
   </Router>,
