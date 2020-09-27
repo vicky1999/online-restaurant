@@ -18,12 +18,12 @@ const Shop= () => {
     <ApolloProvider client={client}>
         <div className="Shop">
             <ShopHead />
-            <MadeByUs /><hr />
-            <Preparations by="us" />
-            <MadeByOthers /><hr />
-            <Preparations by="others" />
-            <Wine /><hr/>
-            <Preparations by="wine" />
+            <MadeByUs /><br/>
+            <Preparations by="us" /><hr />
+            <MadeByOthers /><br/>
+            <Preparations by="others" /><hr />
+            <Wine /><br/>
+            <Preparations by="wine" /><hr />
             <Questions /><hr /><br />
             <ShopFooter />
         </div>
