@@ -10,17 +10,24 @@ import Preparations from './Preparations';
 
 import '../Styles/Shop.css';
 
+import {ApolloProvider} from '@apollo/client';
+import client from '../Client';
+
 const Shop= () => {
     return (
+    <ApolloProvider client={client}>
         <div className="Shop">
             <ShopHead />
             <MadeByUs /><hr />
-            <Preparations making="us" />
+            <Preparations by="us" />
             <MadeByOthers /><hr />
+            <Preparations by="others" />
             <Wine /><hr/>
+            <Preparations by="wine" />
             <Questions /><hr /><br />
             <ShopFooter />
         </div>
+    </ApolloProvider>
     )
 }
 
