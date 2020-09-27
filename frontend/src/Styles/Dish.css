@@ -3,6 +3,7 @@
     padding: 3px 8px;
     justify-content: space-evenly;
     cursor: pointer;
+    margin: 10px 5px;
 }
 .desc {
     white-space: nowrap;
