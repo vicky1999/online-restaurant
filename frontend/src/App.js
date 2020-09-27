@@ -11,9 +11,8 @@ import Private from './Components/Private';
 import WellBeing from './Components/WellBeing';
 import Contact from './Components/Contact';
 
-
 function App() {
-  return (
+return (
     <div className="App">
       <Header />
       <Slides />

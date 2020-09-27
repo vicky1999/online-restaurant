@@ -7,6 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import Dish from './Dish';
+
 import '../Styles/Preparations.css';
 
 const dishes=[
@@ -120,9 +122,7 @@ const Preparations = (props) => {
                         if(dish.type==res) {
                             return (
                                 <div className="dish">
-                                    <h3>{dish.name}</h3>
-                                    <p>{dish.description}</p>
-                                    <p>&euro; {dish.price}</p>
+                                  <Dish name={dish.name} description={dish.description} price={dish.price} />
                                 </div>
                             )
                         }
