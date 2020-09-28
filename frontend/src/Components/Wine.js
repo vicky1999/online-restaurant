@@ -15,7 +15,7 @@ const Wine=() => {
                 <Button href="http://qualitywinesfarringdon.com/" target="_blank" variant="outline-dark" className="button">BOOK A TABLE AT QUALITY WINES</Button><br/>
             </div>
             <div className="right"> 
-                <img src="/images/shop_3.jpg" alt="Pie" className="right-img" />
+                <img src="/images/Shop_3.jpg" alt="Pie" className="right-img" />
             </div>
         </div>
     )

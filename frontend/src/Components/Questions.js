@@ -14,7 +14,7 @@ const Questions=() => {
                 <p>You can email us at <a href="mailto:hello@thequalitychophouse.com">hello@thequalitychophouse.com</a></p>
             </div>
             <div className="right"> 
-                <img src="/images/shop_4.jpg" alt="Questions" className="right-img" />
+                <img src="/images/Shop_4.jpg" alt="Questions" className="right-img" />
             </div>
         </div>
     )
