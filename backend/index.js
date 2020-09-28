@@ -5,6 +5,9 @@ const graphql=require('express-graphql');
 
 const schema=require('./schema/schema');
 
+const ip=require('ip')
+console.log("Running on IP: "+ip.address());
+
 const app=express();
 app.use(cors());
 
