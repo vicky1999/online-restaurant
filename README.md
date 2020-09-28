@@ -1,2 +1,2 @@
 # Online Restaurant
-A restaurant website created using ReactJS
+A restaurant website created using MERN Stack
