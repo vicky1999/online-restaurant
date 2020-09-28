@@ -1,10 +1,10 @@
 body {
     background-color: #ebe6d1;
+    align-items: center;
 }
 .Buy {
     padding: 50px;
     display: inline;
-    align-items: center;
     text-align: center;
     font-family: 'Heebo';
     flex-wrap: wrap;
