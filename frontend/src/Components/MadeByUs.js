@@ -14,10 +14,10 @@ const MadeByUs=() => {
                 <p>We deal in comfort food: crispy confit potatoes, decadent beef mince, crust crumbling pork pies and many more are now available online alongside a selection of cuts from our very own in-house butchery.</p>
             </div>
             <div className="right"> 
-                <img src="/images/shop_1.webp" alt="Pie" className="right-img" />
+                <img src="/images/Shop_1.webp" alt="Pie" className="right-img" />
             </div>
             <div className="right"> 
-                <img src="/images/shop_5.webp" alt="Pie" className="right-img" />
+                <img src="/images/Shop_5.webp" alt="Pie" className="right-img" />
             </div>
             <div className="left">
                 <h1>READY-TO-HEAT MEALS</h1>

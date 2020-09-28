@@ -14,7 +14,7 @@ const MadeByOthers=() => {
                 
             </div>
             <div className="right"> 
-                <img src="/images/shop_2.webp" alt="Pie" className="right-img" />
+                <img src="/images/Shop_2.webp" alt="Pie" className="right-img" />
             </div>
         </div>
     )
